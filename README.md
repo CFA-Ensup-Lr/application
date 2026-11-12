@@ -6,22 +6,15 @@ App web minimale de chat avec l'API Mistral, utilisant le SDK TypeScript officie
 - Stack : Node.js + Express (serveur) / HTML + JS vanilla (client)
 - La clé `MISTRAL_API_KEY` n'est utilisée **que côté serveur** (`server.mjs`) ; elle n'est jamais exposée au navigateur.
 
-## Configuration
+## Installation et lancement
 
-Créez un fichier `.env` à partir de l'exemple et renseignez votre clé API ([obtenir une clé](https://console.mistral.ai/api-keys/)) :
-
-```bash
-cp .env.example .env
-# puis éditez .env avec votre clé : MISTRAL_API_KEY=...
-```
-
-## Installation
+Une seule commande prépare tout (crée `.env` s'il n'existe pas + installe les dépendances) :
 
 ```bash
-npm install
+npm run setup
 ```
 
-## Lancement
+Puis renseignez votre clé dans `.env` et lancez :
 
 ```bash
 npm start        # production
