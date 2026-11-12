@@ -1,0 +1,16 @@
+{
+  "name": "mistral-chat-app",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "setup": "node -e \"const fs=require('fs');fs.existsSync('.env')||fs.copyFileSync('.env.example','.env')\" && npm install",
+    "start": "node server.mjs",
+    "dev": "node --watch server.mjs"
+  },
+  "dependencies": {
+    "@mistralai/mistralai": "^1.7.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}
